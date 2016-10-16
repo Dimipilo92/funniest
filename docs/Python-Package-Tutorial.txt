@@ -1,0 +1,56 @@
+=== Python Package Tutorial ==========================================
+
+https://python-packaging.readthedocs.io/en/latest/minimal.html
+
+
+# module names are generally all lowercase and unique on pypi
+# they are usually seperated by underscores or not at all
+
+
+# all python code belongs in funniest/funniest
+https://www.reddit.com/r/Python/comments/3uzl2a/setuppy_requirementstxt_or_a_combination/
+http://stackoverflow.com/questions/7225900/how-to-pip-install-packages-according-to-requirements-txt-from-a-local-directory
+http://stackoverflow.com/questions/10744305/how-to-create-gitignore-file
+
+pip install . # install a package in current directory
+pip install funniest # install a remote package
+pip uninstall funniest
+
+Basic Structure (Clean):
+funniest/
+    funniest/
+        __init__.py
+        command_line.py
+        tests/
+            __init__.py
+            test_joke.py
+            test_command_line.py
+    MANIFEST.in
+    README.rst
+    setup.py
+    .gitignore
+
+Sample Structure:
+funniest/
+    funniest/ # all python code goes in here
+        __init__.py # this is your "main"
+		text.py # subdirectory for tests so global namespace isn't polutted
+		data.json # just a json file to demonstrate that non-code can go in funniest
+		command_line.py # sample file that holds entry point functions
+        tests/
+            __init__.py
+            test_joke.py
+			test_command_line
+	bin/ # for scripts you want to write that will get copied into path (must be added to setup.py)
+		funniest-joke
+	docs/ # store documentation
+		doc.txt # not sure if this is an actual documentation name
+    setup.py # metadata and dependencies Dependencies will be copied from dependencies
+	preferences.txt  # put all of your dependencies in here (Used in github)
+	README.rst # you're readme of course. Used in Pypi and github
+    MANIFEST.in # handles non-code files (including README.rst)
+	gitignore # put all the files that should get ignored
+	
+Further Reading: http://docs.python-guide.org/en/latest/writing/structure/#regarding-django-applications
+
+https://teamtreehouse.com/community/tutorial-code-on-github
