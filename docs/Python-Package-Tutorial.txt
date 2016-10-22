@@ -45,8 +45,8 @@ funniest/
 		funniest-joke
 	docs/ # store documentation
 		doc.txt # not sure if this is an actual documentation name
-    setup.py # metadata and dependencies Dependencies will be copied from dependencies
-	preferences.txt  # put all of your dependencies in here (Used in github)
+    setup.py # metadata and dependencies Dependencies will be copied from requirements.txt
+	requirements.txt  # put all of your dependencies in here (Used in github)
 	README.rst # you're readme of course. Used in Pypi and github
     MANIFEST.in # handles non-code files (including README.rst)
 	gitignore # put all the files that should get ignored
